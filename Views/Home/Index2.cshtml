@@ -1,0 +1,14 @@
+﻿@using AspnetCoreTempDataWithComplexDataType.Models;
+@{
+    AspnetCoreTempDataWithComplexDataType.Models.PageDateTime pageDateTime = TempData.Get<PageDateTime>("DateTime");
+ }
+<h3>Index2</h3>
+<h3>
+    First page Processing Time :
+    @if (pageDateTime != null)
+    {
+        <text>@pageDateTime.ProcessingDateTime</text>
+    }
+</h3>
+<br />
+<a href="/Home/Index3">Next Page</a>
